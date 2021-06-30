@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Variables:
+nasip=10.0.3.2
+kubeip=10.0.3.3
+kubeport=1234
+kub_flannel_url='https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml'

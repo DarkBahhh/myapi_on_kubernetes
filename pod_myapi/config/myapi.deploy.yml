@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapideployment
+  labels:
+    app: myapi
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapi
+  template:
+    metadata:
+      labels:
+        app: myapi
+    spec:
+      containers:
+      - name: myapi-backend
+        image: darkbahhh/myapi-backend
+        ports:
+          - containerPort: 8001
+        env:
+          - name: API_DATA_PATH
+            value: "/opt/myapi/data.txt"
+        volumeMounts:
+          - name: myapistore
+            mountPath: /opt/myapi
+      - name: myapi-frontend
+        image: darkbahhh/myapi-frontend
+        ports:
+          - containerPort: 8000
+        env:
+          - name: API_BACKEND_URL
+            value: "127.0.0.1"
+          - name: API_BACKEND_PORT
+            value: "8001"
+      volumes:
+      - name: myapistore
+        persistentVolumeClaim:
+          claimName: pvcnfsmyapi

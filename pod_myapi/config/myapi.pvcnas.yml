@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvcnfsmyapi
+spec:
+  storageClassName: nfs-nas
+  accessModes:
+  - ReadOnlyMany
+  resources:
+    requests:
+      storage: 2048Ki
