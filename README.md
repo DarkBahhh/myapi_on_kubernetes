@@ -6,8 +6,8 @@ L'objectif de ce TP est de créer un *cluster* kubernetes permettant le déploie
 
 ## Les applicatifs
 
-Les applicatifs utilisés dans ce TP sont des images docker récupérées depuis DeckerHub aux adresses suivante : https://hub.docker.com/darkbahhh/myapi-backend et https://hub.docker.com/darkbahhh/myapi-frontend .
-Le code ayant permis la génération de ses deux images est disponible à l'adresse suivante https://github.io/DarkBahhh/myapi_python .
+Les applicatifs utilisés dans ce TP sont des images docker récupérées depuis DeckerHub aux adresses suivante : https://hub.docker.com/repository/docker/darkbahhh/myapi-backend et https://hub.docker.com/repository/docker/darkbahhh/myapi-frontend .
+Le code ayant permis la génération de ses deux images est disponible à l'adresse suivante https://github.com/DarkBahhh/myapi_python .
 
 ## Le déploiement
 
