@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Args:
-#    $1 : master|worker
-
 # Imports:
 source $(dirname $0)/vars
 
